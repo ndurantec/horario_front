@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Formulário</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">	
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="../asset/style/disciplina.css">
 </head>
 <body>
 	<h1>Cadastro Disciplina  </h1>
@@ -12,15 +12,16 @@
 		<label for="nome_disciplina">Nome:</label>
 		<input type="text" id="nome_disciplina">
 		<br>
+
+		<div class="bnt-class">
+			<button type="button" id="submit-salvar" onclick="salvar()">Salvar</button>
+			<button type="button" id="submit-consultar" onclick="consultar()">Consultar</button>
+			<button type="button" id="submit-alterar" onclick="alterar()">Alterar</button>
+			<button type="button" id="submit-apagar" onclick="apagar()">Apagar</button>
+		</div>
 		
-		<label for="carga_horaria">Carga horaria:</label>
-		<input type="text" id="carga_horaria">
-		<br>
-
-
-		<button type="submit" id="submit-btn">Cadastrar</button>		
 		<!-- <button type="submit" onclick="executar()">Enviar</button> -->
 	</form>	
-	<script src="script.js"></script>
+	<script src="../script/disciplina.js"></script>
 </body>
 </html>

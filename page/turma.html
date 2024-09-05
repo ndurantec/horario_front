@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Formulário</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">	
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="../asset/style/turma.css">
 </head>
 <body>
 	<h1>Cadastro da Turma</h1>
@@ -16,9 +16,14 @@
 		<input type="text" id="sala"><br>
 		<br>
 		
-		<button type="submit" id="submit-btn">Cadastrar Nova Turma</button>		
+		<div class="btn-class">
+			<button type="button" id="submit-btn-salvar" onclick="salvar()">Cadastrar</button>		
+			<button type="button" id="submit-btn-salvar" onclick="consultar()">Consultar</button>		
+			<button type="button" id="submit-btn-salvar" onclick="alterar()">Alterar</button>		
+			<button type="button" id="submit-btn-salvar" onclick="apagar()">Apagar</button>				
+		</div>
 		<!-- <button type="submit" onclick="executar()">Enviar</button> -->
 	</form>	
-	<script src="script.js"></script>
+	<script src="../script/turma.js"></script>
 </body>
 </html>

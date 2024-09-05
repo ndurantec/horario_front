@@ -15,10 +15,15 @@
 		<label for="posicao_aula">Posição de Aula:</label>
 		<input type="text" id="posicao_aula"><br>
 		<br>
-		
-		<button type="submit" id="submit-btn">Buscar</button>		
+
+		<div class="btn-class">
+			<button type="button" id="submit-btn-salvar" onclick="salvar()">Salvar</button>		
+			<button type="button" id="submit-btn-salvar" onclick="consultar()">Consultar</button>		
+			<button type="button" id="submit-btn-salvar" onclick="alterar()">Alterar</button>		
+			<button type="button" id="submit-btn-salvar" onclick="apagar()">Apagar</button>				
+		</div>
 		<!-- <button type="submit" onclick="executar()">Enviar</button> -->
 	</form>	
-	<script src="script.js"></script>
+	<script src="../script/grade_horario.js"></script>
 </body>
 </html>
