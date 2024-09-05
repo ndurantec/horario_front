@@ -42,18 +42,21 @@ input[type="text"] {
   border-radius: 3px;
 }
 
-button[type="submit"] {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  border: none;
-  border-radius: 3px;
-  background-color: #4CAF50;
-  color: #fff;
-  font-weight: bold;
-  cursor: pointer;
+.btn-class{
+ display: flex;
+ justify-content: space-between;
 }
 
-button[type="submit"]:hover {
+button {
+  width: 120%;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 10px;
+  text-align: center;
+  background: #4CAF50;
+  color: #fff;
+}
+
+button[type="button"]:hover {
   background-color: #3e8e41;
 }
