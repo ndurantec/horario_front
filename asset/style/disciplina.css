@@ -41,19 +41,24 @@ input[type="text"] {
   border: 1px solid #ccc;
   border-radius: 3px;
 }
+.bnt-class{
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
 
-button[type="submit"] {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  border: none;
-  border-radius: 3px;
-  background-color: #4CAF50;
-  color: #fff;
-  font-weight: bold;
-  cursor: pointer;
 }
 
-button[type="submit"]:hover {
+button{
+  width: 120px;
+  border:1px solid #ccc;
+  border-radius: 3px;
+  padding: 10px;
+  text-align: center;
+  background: #4CAF50;
+  color:#fff;
+  
+}
+
+button[type="button"]:hover {
   background-color: #3e8e41;
 }
