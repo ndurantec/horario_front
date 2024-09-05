@@ -42,18 +42,16 @@ input[type="text"] {
   border-radius: 3px;
 }
 
-button[type="submit"] {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  border: none;
+button {
+  width: 120px;
+  border: 1px solid #ccc;
   border-radius: 3px;
-  background-color: #4CAF50;
+  padding: 10px;
+  text-align: center;
+  background: #4CAF50;
   color: #fff;
-  font-weight: bold;
-  cursor: pointer;
 }
 
-button[type="submit"]:hover {
-  background-color: #3e8e41;
+button[type="button"]:hover {
+  background-color: #183f19;
 }
