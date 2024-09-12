@@ -131,9 +131,9 @@ function apagar() {
   const disciplina = document.getElementById("nome_disciplina");
  
 
-  var headers = new Headers();    
-  headers.append("Content-Type", "application/json");
-  headers.append("Access-Control-Allow-Origin", "http://127.0.0.1:5500");
+    var headers = new Headers();    
+    headers.append("Content-Type", "application/json");
+    headers.append("Access-Control-Allow-Origin", "http://127.0.0.1:5500");
 
   fetch("localhost:8080/disciplina/inserir" ,{
 
