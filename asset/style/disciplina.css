@@ -1,8 +1,8 @@
 /* Estilos gerais */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
-  color: #333;
+  background-color: #e6daec;
+  color: #080808;
   margin: 0;
 }
 
@@ -11,9 +11,9 @@ form {
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
-  border: 1px solid #ddd;
+  border: 1px solid #11508b;
   border-radius: 5px;
-  background-color: #fff;
+  background-color: #caddec;
 }
 
 @media only screen and (max-width: 767px) {
@@ -38,7 +38,7 @@ input[type="text"] {
   width: 95%;
   padding: 10px;
   margin-bottom: 20px;
-  border: 1px solid #ccc;
+  border: 1px solid #11508b;
   border-radius: 3px;
 }
 .bnt-class{
@@ -50,15 +50,16 @@ input[type="text"] {
 
 button{
   width: 120px;
-  border:1px solid #ccc;
+  background-color: #c17fe2;
+  border:1px solid ;
   border-radius: 3px;
   padding: 10px;
   text-align: center;
-  background: #4CAF50;
-  color:#fff;
+  background: #097897;
+  color:#ffffff;
   
 }
 
 button[type="button"]:hover {
-  background-color: #3e8e41;
+  background-color: #479bd3;
 }
