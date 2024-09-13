@@ -1,13 +1,13 @@
 function salvar () {
-  const cadastro_turma = document.getElementById("cadastro_turma");
-  const sala = document.getElementById("sala");
+  const cadastro_turma = document.getElementById("cadastro_turma").value;
+  const sala = document.getElementById("sala").value;
   
 
   var headers = new Headers();    
   headers.append("Content-Type", "application/json");
   headers.append("Access-Control-Allow-Origin", "http://127.0.0.1:5500");
 
-  fetch("localhost:8080/turma/inserir" ,{
+  fetch("http://127.0.0.1:8080/turma/insert" ,{
 
     method: "POST",
     mode: "cors", // Usando 'cors' para permitir a requisição de origem cruzada
@@ -46,15 +46,15 @@ function salvar () {
 }
 
 function consultar () {
-  const cadastro_turma = document.getElementById("cadastro_turma");
-  const sala = document.getElementById("sala");
+  const cadastro_turma = document.getElementById("cadastro_turma").value;
+  const sala = document.getElementById("sala").value;
   
 
   var headers = new Headers();    
   headers.append("Content-Type", "application/json");
   headers.append("Access-Control-Allow-Origin", "http://127.0.0.1:5500");
 
-  fetch("localhost:8080/turma/inserir" ,{
+  fetch("http://127.0.0.1:8080/turma/insert" ,{
 
     method: "POST",
     mode: "cors", // Usando 'cors' para permitir a requisição de origem cruzada
@@ -93,15 +93,15 @@ function consultar () {
 }
 
 function alterar () {
-  const cadastro_turma = document.getElementById("cadastro_turma");
-  const sala = document.getElementById("sala");
+  const cadastro_turma = document.getElementById("cadastro_turma").value;
+  const sala = document.getElementById("sala").value;
   
 
   var headers = new Headers();    
   headers.append("Content-Type", "application/json");
   headers.append("Access-Control-Allow-Origin", "http://127.0.0.1:5500");
 
-  fetch("localhost:8080/turma/inserir" ,{
+  fetch("http://127.0.0.1:8080/turma/insert" ,{
 
     method: "POST",
     mode: "cors", // Usando 'cors' para permitir a requisição de origem cruzada
@@ -140,15 +140,15 @@ function alterar () {
 }
 
 function apagar () {
-  const cadastro_turma = document.getElementById("cadastro_turma");
-  const sala = document.getElementById("sala");
+  const cadastro_turma = document.getElementById("cadastro_turma").value;
+  const sala = document.getElementById("sala").value;
   
 
   var headers = new Headers();    
   headers.append("Content-Type", "application/json");
   headers.append("Access-Control-Allow-Origin", "http://127.0.0.1:5500");
 
-  fetch("localhost:8080/turma/inserir" ,{
+  fetch("http://127.0.0.1:8080/turma/insert" ,{
 
     method: "POST",
     mode: "cors", // Usando 'cors' para permitir a requisição de origem cruzada

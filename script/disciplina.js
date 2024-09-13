@@ -1,12 +1,12 @@
 function salvar() {
-  const disciplina = document.getElementById("nome_disciplina");
+  const disciplina = document.getElementById("nome_disciplina").value;
  
 
   var headers = new Headers();    
   headers.append("Content-Type", "application/json");
-  headers.append("Access-Control-Allow-Origin", "http://172.16.0.112:5500");
+  headers.append("Access-Control-Allow-Origin", "http://127.0.0.1:5500");
 
-  fetch("172.16.0.110:8080/disciplina/create" ,{
+  fetch("http://127.0.0.1:8080/disciplina/insert" ,{
 
     method: "POST",
     mode: "cors", // Usando 'cors' para permitir a requisição de origem cruzada
@@ -42,14 +42,14 @@ function salvar() {
 }
 
 function consultar() {
-  const disciplina = document.getElementById("nome_disciplina");
+  const disciplina = document.getElementById("nome_disciplina").value;
  
 
   var headers = new Headers();    
   headers.append("Content-Type", "application/json");
   headers.append("Access-Control-Allow-Origin", "http://127.0.0.1:5500");
 
-  fetch("localhost:8080/disciplina/inserir" ,{
+  fetch("http://127.0.0.1:8080/disciplina/insert" ,{
 
     method: "POST",
     mode: "cors", // Usando 'cors' para permitir a requisição de origem cruzada
@@ -85,14 +85,14 @@ function consultar() {
 }
 
 function alterar() {
-  const disciplina = document.getElementById("nome_disciplina");
+  const disciplina = document.getElementById("nome_disciplina").value;
  
 
   var headers = new Headers();    
   headers.append("Content-Type", "application/json");
   headers.append("Access-Control-Allow-Origin", "http://127.0.0.1:5500");
 
-  fetch("localhost:8080/disciplina/inserir" ,{
+  fetch("http://127.0.0.1:8080/disciplina/insert" ,{
 
     method: "POST",
     mode: "cors", // Usando 'cors' para permitir a requisição de origem cruzada
@@ -128,14 +128,14 @@ function alterar() {
 }
 
 function apagar() {
-  const disciplina = document.getElementById("nome_disciplina");
+  const disciplina = document.getElementById("nome_disciplina").value;
  
 
     var headers = new Headers();    
     headers.append("Content-Type", "application/json");
     headers.append("Access-Control-Allow-Origin", "http://127.0.0.1:5500");
 
-  fetch("localhost:8080/disciplina/inserir" ,{
+  fetch("http://127.0.0.1:8080/disciplina/insert" ,{
 
     method: "POST",
     mode: "cors", // Usando 'cors' para permitir a requisição de origem cruzada

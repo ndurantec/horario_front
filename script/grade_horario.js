@@ -1,13 +1,13 @@
 function salvar () {
-  const dia_semana = document.getElementById("dia_semana");
-  const posicao_aula = document.getElementById("posicao_aula");
+  const dia_semana = document.getElementById("dia_semana").value;
+  const posicao_aula = document.getElementById("posicao_aula").value;
   
 
   var headers = new Headers();    
   headers.append("Content-Type", "application/json");
   headers.append("Access-Control-Allow-Origin", "http://127.0.0.1:5500");
 
-  fetch("localhost:8080/grade_horario/inserir" ,{
+  fetch("http://127.0.0.1:8080/grade_horario/insert" ,{
 
     method: "POST",
     mode: "cors", // Usando 'cors' para permitir a requisição de origem cruzada
@@ -46,15 +46,15 @@ function salvar () {
 }
 
 function consultar () {
-  const dia_semana = document.getElementById("dia_semana");
-  const posicao_aula = document.getElementById("posicao_aula");
+  const dia_semana = document.getElementById("dia_semana").value;
+  const posicao_aula = document.getElementById("posicao_aula").value;
   
 
   var headers = new Headers();    
   headers.append("Content-Type", "application/json");
   headers.append("Access-Control-Allow-Origin", "http://127.0.0.1:5500");
 
-  fetch("localhost:8080/grade_horario/inserir" ,{
+  fetch("http://127.0.0.1:8080/grade_horario/insert" ,{
 
     method: "POST",
     mode: "cors", // Usando 'cors' para permitir a requisição de origem cruzada
@@ -93,15 +93,15 @@ function consultar () {
 }
 
 function alterar () {
-  const dia_semana = document.getElementById("dia_semana");
-  const posicao_aula = document.getElementById("posicao_aula");
+  const dia_semana = document.getElementById("dia_semana").value;
+  const posicao_aula = document.getElementById("posicao_aula").value;
   
 
   var headers = new Headers();    
   headers.append("Content-Type", "application/json");
   headers.append("Access-Control-Allow-Origin", "http://127.0.0.1:5500");
 
-  fetch("localhost:8080/grade_horario/inserir" ,{
+  fetch("http://127.0.0.1:8080/grade_horario/insert" ,{
 
     method: "POST",
     mode: "cors", // Usando 'cors' para permitir a requisição de origem cruzada
@@ -140,15 +140,15 @@ function alterar () {
 }
 
 function apagar () {
-  const dia_semana = document.getElementById("dia_semana");
-  const posicao_aula = document.getElementById("posicao_aula");
+  const dia_semana = document.getElementById("dia_semana").value;
+  const posicao_aula = document.getElementById("posicao_aula").value;
   
 
   var headers = new Headers();    
   headers.append("Content-Type", "application/json");
   headers.append("Access-Control-Allow-Origin", "http://127.0.0.1:5500");
 
-  fetch("localhost:8080/grade_horario/inserir" ,{
+  fetch("http://127.0.0.1:8080/grade_horario/insert" ,{
 
     method: "POST",
     mode: "cors", // Usando 'cors' para permitir a requisição de origem cruzada

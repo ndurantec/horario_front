@@ -1,13 +1,13 @@
   function salvar () {
-    const professor = document.getElementById("nome_prof");
-    const cpf = document.getElementById("cpf");
+    const professor = document.getElementById("nome_prof").value;
+    const cpf = document.getElementById("cpf").value;
     
 
     var headers = new Headers();    
     headers.append("Content-Type", "application/json");
-    headers.append("Access-Control-Allow-Origin", "http://172.16.0.112:5500");
+    headers.append("Access-Control-Allow-Origin", "http://127.0.0.1:5500");
   
-    fetch("172.16.0.110:8080/professor/insert" ,{
+    fetch("http://127.0.0.1:8080/professor/insert",{
   
       method: "POST",
       mode: "cors", // Usando 'cors' para permitir a requisição de origem cruzada
@@ -48,15 +48,15 @@
 }
 
   function consultar () {
-    const professor = document.getElementById("professor");
-    const cpf = document.getElementById("cpf");
+    const professor = document.getElementById("professor").value;
+    const cpf = document.getElementById("cpf").value;
  
 
     var headers = new Headers();    
     headers.append("Content-Type", "application/json");
     headers.append("Access-Control-Allow-Origin", "http://127.0.0.1:5500");
   
-    fetch("localhost:8080/professor/inserir" ,{
+    fetch("http://127.0.0.1:8080/professor/insert" ,{
   
       method: "POST",
       mode: "cors", // Usando 'cors' para permitir a requisição de origem cruzada
@@ -94,16 +94,16 @@
     .catch(error => console.error("Erro!:", error));
 }
 
-  function alterar() {
-    const professor = document.getElementById("nome_prof");
-    const cpf = document.getElementById("cpf");
+  function alterar() {  
+    const professor = document.getElementById("nome_prof").value;
+    const cpf = document.getElementById("cpf").value;
  
 
     var headers = new Headers();    
     headers.append("Content-Type", "application/json");
     headers.append("Access-Control-Allow-Origin", "http://127.0.0.1:5500");
   
-    fetch("localhost:8080/professor/inserir" ,{
+    fetch("http://127.0.0.1:8080/professor/insert" ,{
   
       method: "POST",
       mode: "cors", // Usando 'cors' para permitir a requisição de origem cruzada
@@ -142,15 +142,15 @@
 }
 
   function apagar () {
-    const professor = document.getElementById("nome_prof");
-    const cpf = document.getElementById("cpf");
+    const professor = document.getElementById("nome_prof").value;
+    const cpf = document.getElementById("cpf").value;
  
 
     var headers = new Headers();    
     headers.append("Content-Type", "application/json");
     headers.append("Access-Control-Allow-Origin", "http://127.0.0.1:5500");
 
-  fetch("localhost:8080/professor/inserir" ,{
+  fetch("http://127.0.0.1:8080/professor/insert" ,{
 
     method: "POST",
     mode: "cors", // Usando 'cors' para permitir a requisição de origem cruzada
