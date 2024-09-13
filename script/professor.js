@@ -58,7 +58,7 @@
   
     fetch("http://127.0.0.1:8080/professor/insert" ,{
   
-      method: "POST",
+      method: "GET",
       mode: "cors", // Usando 'cors' para permitir a requisição de origem cruzada
       cache: "no-cache",
      
@@ -105,7 +105,7 @@
   
     fetch("http://127.0.0.1:8080/professor/insert" ,{
   
-      method: "POST",
+      method: "PUT",
       mode: "cors", // Usando 'cors' para permitir a requisição de origem cruzada
       cache: "no-cache",
      
@@ -152,7 +152,7 @@
 
   fetch("http://127.0.0.1:8080/professor/insert" ,{
 
-    method: "POST",
+    method: "DELETE",
     mode: "cors", // Usando 'cors' para permitir a requisição de origem cruzada
     cache: "no-cache",
    
