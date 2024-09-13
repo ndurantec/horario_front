@@ -55,7 +55,7 @@ function consultar() {
   headers.append("Content-Type", "application/json");
   headers.append("Access-Control-Allow-Origin", "http://127.0.0.1:5500");
 
-  fetch("http://127.0.0.1:8080/disciplina/insert" ,{
+  fetch("http://127.0.0.1:8080/disciplina/findByld" ,{
 
     method: "GET",
     mode: "cors", // Usando 'cors' para permitir a requisição de origem cruzada
@@ -104,7 +104,7 @@ function alterar() {
   headers.append("Content-Type", "application/json");
   headers.append("Access-Control-Allow-Origin", "http://127.0.0.1:5500");
 
-  fetch("http://127.0.0.1:8080/disciplina/insert" ,{
+  fetch("http://127.0.0.1:8080/disciplina/update" ,{
 
     method: "PUT",
     mode: "cors", // Usando 'cors' para permitir a requisição de origem cruzada
@@ -152,7 +152,7 @@ function apagar() {
     headers.append("Content-Type", "application/json");
     headers.append("Access-Control-Allow-Origin", "http://127.0.0.1:5500");
 
-  fetch("http://127.0.0.1:8080/disciplina/insert" ,{
+  fetch("http://127.0.0.1:8080/disciplina/delete" ,{
 
     method: "DELETE",
     mode: "cors", // Usando 'cors' para permitir a requisição de origem cruzada

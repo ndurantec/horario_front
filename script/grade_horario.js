@@ -54,7 +54,7 @@ function consultar () {
   headers.append("Content-Type", "application/json");
   headers.append("Access-Control-Allow-Origin", "http://127.0.0.1:5500");
 
-  fetch("http://127.0.0.1:8080/grade_horario/insert" ,{
+  fetch("http://127.0.0.1:8080/grade_horario/findByld" ,{
 
     method: "GET",
     mode: "cors", // Usando 'cors' para permitir a requisição de origem cruzada
@@ -101,7 +101,7 @@ function alterar () {
   headers.append("Content-Type", "application/json");
   headers.append("Access-Control-Allow-Origin", "http://127.0.0.1:5500");
 
-  fetch("http://127.0.0.1:8080/grade_horario/insert" ,{
+  fetch("http://127.0.0.1:8080/grade_horario/update" ,{
 
     method: "PUT",
     mode: "cors", // Usando 'cors' para permitir a requisição de origem cruzada
@@ -148,7 +148,7 @@ function apagar () {
   headers.append("Content-Type", "application/json");
   headers.append("Access-Control-Allow-Origin", "http://127.0.0.1:5500");
 
-  fetch("http://127.0.0.1:8080/grade_horario/insert" ,{
+  fetch("http://127.0.0.1:8080/grade_horario/delete" ,{
 
     method: "DELETE",
     mode: "cors", // Usando 'cors' para permitir a requisição de origem cruzada
