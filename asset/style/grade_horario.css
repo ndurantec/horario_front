@@ -1,8 +1,8 @@
 /* Estilos gerais */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
-  color: #333;
+  background-color: #addbf0;
+  color: #0e070f;
   margin: 0;
 }
 
@@ -11,9 +11,9 @@ form {
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
-  border: 1px solid #ddd;
+  border: 1px solid #3273d4;
   border-radius: 5px;
-  background-color: #fff;
+  background-color: ##a3cae4;
 }
 
 @media only screen and (max-width: 767px) {
@@ -48,7 +48,7 @@ button {
   border-radius: 3px;
   padding: 10px;
   text-align: center;
-  background: #4CAF50;
+  background: #097897;
   color: #fff;
 }
 

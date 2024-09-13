@@ -1,8 +1,8 @@
 /* Estilos gerais */
 body {
   font-family: "Lexend", sans-serif;
-  background-color: #e6daec;
-  color: #080808;
+  background-color: #addbf0;
+  color: #0e070f;
   margin: 0;
 }
 
@@ -11,9 +11,9 @@ form {
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
-  border: 1px solid #11508b;
+  border: 1px solid #3273d4;
   border-radius: 5px;
-  background-color: #caddec;
+  background-color: ##a3cae4;
 }
 
 @media only screen and (max-width: 767px) {
@@ -38,7 +38,7 @@ input[type="text"] {
   width: 95%;
   padding: 10px;
   margin-bottom: 20px;
-  border: 1px solid #11508b;
+  border: 1px solid #ccc;
   border-radius: 3px;
 }
 .bnt-class{
@@ -50,13 +50,13 @@ input[type="text"] {
 
 button{
   width: 120px;
-  background-color: #c17fe2;
+  background-color: #ccc;
   border:1px solid ;
   border-radius: 3px;
   padding: 10px;
   text-align: center;
   background: #097897;
-  color:#ffffff;
+  color:#fff;
   
 }
 
