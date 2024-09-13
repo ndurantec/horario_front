@@ -1,6 +1,7 @@
 function salvar() {
-  const disciplina = document.getElementById("nome_disciplina").value;
- 
+  const nome_disciplina = document.getElementById("nome_disciplina").value;
+  const carga_horaria = document.getElementById("carga_horaria").value;
+  const nome_professor = document.getElementById("nome_professor").value;
 
   var headers = new Headers();    
   headers.append("Content-Type", "application/json");
@@ -14,7 +15,11 @@ function salvar() {
    
     // Convertendo o objeto JavaScript para JSON
     // Esta parte é importante onde você deve passar os parametros (dados) da sua tela
-    body: JSON.stringify({ nome: disciplina }),
+    body: JSON.stringify({
+       nome_disciplina: nome_disciplina,
+       carga_horaria: carga_horaria,
+       nome_professor: nome_professor
+       }),
 
     headers: headers
 
@@ -42,8 +47,9 @@ function salvar() {
 }
 
 function consultar() {
-  const disciplina = document.getElementById("nome_disciplina").value;
- 
+  const nome_disciplina = document.getElementById("nome_disciplina").value;
+  const carga_horaria = document.getElementById("carga_horaria").value;
+  const nome_professor = document.getElementById("nome_professor").value;
 
   var headers = new Headers();    
   headers.append("Content-Type", "application/json");
@@ -57,7 +63,11 @@ function consultar() {
    
     // Convertendo o objeto JavaScript para JSON
     // Esta parte é importante onde você deve passar os parametros (dados) da sua tela
-    body: JSON.stringify({ nome: disciplina }),
+    body: JSON.stringify({ 
+        nome_disciplina: nome_disciplina,
+        carga_horaria: carga_horaria,
+        nome_professor: nome_professor
+     }),
 
     headers: headers
 
@@ -85,7 +95,9 @@ function consultar() {
 }
 
 function alterar() {
-  const disciplina = document.getElementById("nome_disciplina").value;
+  const nome_disciplina = document.getElementById("nome_disciplina").value;
+  const carga_horaria = document.getElementById("carga_horaria").value;
+  const nome_professor = document.getElementById("nome_professor").value;
  
 
   var headers = new Headers();    
@@ -100,7 +112,10 @@ function alterar() {
    
     // Convertendo o objeto JavaScript para JSON
     // Esta parte é importante onde você deve passar os parametros (dados) da sua tela
-    body: JSON.stringify({ nome: disciplina }),
+    body: JSON.stringify({ 
+        nome_disciplina: nome_disciplina,
+        carga_horaria: carga_horaria,
+        nome_professor: nome_professor }),
 
     headers: headers
 
@@ -128,7 +143,9 @@ function alterar() {
 }
 
 function apagar() {
-  const disciplina = document.getElementById("nome_disciplina").value;
+  const nome_disciplina = document.getElementById("nome_disciplina").value;
+  const carga_horaria = document.getElementById("carga_horaria").value;
+  const nome_professor = document.getElementById("nome_professor").value;
  
 
     var headers = new Headers();    
@@ -143,7 +160,10 @@ function apagar() {
    
     // Convertendo o objeto JavaScript para JSON
     // Esta parte é importante onde você deve passar os parametros (dados) da sua tela
-    body: JSON.stringify({ nome: disciplina }),
+    body: JSON.stringify({
+        nome_disciplina: nome_disciplina,
+        carga_horaria: carga_horaria,
+        nome_professor: nome_professor }),
 
     headers: headers
 
