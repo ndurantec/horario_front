@@ -13,7 +13,7 @@ form {
   padding: 20px;
   border: 1px solid #3273d4;
   border-radius: 5px;
-  background-color: ##a3cae4;
+  background-color: #a3cae4;
 }
 
 @media only screen and (max-width: 767px) {
@@ -58,5 +58,5 @@ button {
 }
 
 button[type="button"]:hover {
-  background-color: #183f19;
+  background-color: #479bd3;
 }
