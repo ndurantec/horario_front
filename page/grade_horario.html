@@ -16,6 +16,12 @@
 		<input type="text" id="posicao_aula"><br>
 		<br>
 
+		<select id="professor">
+			<h1>Escolha um Professor:</h1>
+			<option></option>
+				<option> th:each ="item : ${items}" th:value="${item.id}" th:text="${item.nome}"</option>
+		</select>
+
 		<div class="btn-class">
 			<button type="button" id="submit-btn-salvar" onclick="salvar()">Salvar</button>		
 			<button type="button" id="submit-btn-salvar" onclick="consultar()">Consultar</button>		
