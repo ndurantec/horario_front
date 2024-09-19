@@ -1,5 +1,5 @@
 body {
-    background-image: url('../image/fundo.png'); /* Substitua pelo caminho da sua imagem */
+    background-image: url('../image/fundo.afif'); /* Substitua pelo caminho da sua imagem */
     background-size:100%; /* Ajusta a imagem para cobrir todo o fundo */
     background-repeat: no-repeat; /* Evita que a imagem se repita */
     margin: 0;
@@ -9,13 +9,15 @@ body {
     display: flex;
     align-items: center;
     justify-content: center; /* Centraliza o conteúdo horizontalmente */
-    padding: 30px 20px;
-    background-color: #097897;
+    padding: 200px 20px;
+    background-color: transparent;
     color: white; 
     position: relative; /* Para o uso de flexbox e centralização */
 }
 
 .logo {
+    width: 80px;
+    height: 80px;
     position: absolute; /* Logo fica fixa no lado esquerdo */
     left: 20px;
 }
@@ -42,13 +44,13 @@ body {
 }
 
 .nav ul li a {
-    color: white; /* Cor padrão dos links */
+    color: black; /* Cor padrão dos links */
     text-decoration: none; /* Remove o sublinhado dos links */
     font-size: 20px;
     transition: color 0.3s ease; /* Suaviza a transição da cor */
 }
 
 .nav ul li a:hover {
-    color: #addbf0; /* Cor dos links quando o mouse está sobre eles */
+    color: #13a4e7; /* Cor dos links quando o mouse está sobre eles */
     text-decoration: underline; /* Opcional: adiciona sublinhado ao passar o mouse */
 }
