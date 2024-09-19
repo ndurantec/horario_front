@@ -1,11 +1,16 @@
 function salvar() {
-  const nome_disciplina = document.getElementById("nome_disciplina").value;
-  const carga_horaria = document.getElementById("carga_horaria").value;
-  const nome_professor = document.getElementById("nome_professor").value;
+  const nome_disciplina = document.getElementById("nome_disciplina").value;                                                  
+  const carga_horaria = Number(document.getElementById("carga_horaria").value);
+  const nome_professor = Number(document.getElementById("nome_professor").value);
+
+  console.log(nome_disciplina);
+  console.log(carga_horaria);
+  console.log(nome_professor);
+
 
   var headers = new Headers();    
   headers.append("Content-Type", "application/json");
-  headers.append("Access-Control-Allow-Origin", "http://127.0.0.1:5500");
+  headers.append("Access-Control-Allow-Origin", "*");
 
   fetch("http://127.0.0.1:8080/disciplina/insert" ,{
 
@@ -16,9 +21,9 @@ function salvar() {
     // Convertendo o objeto JavaScript para JSON
     // Esta parte é importante onde você deve passar os parametros (dados) da sua tela
     body: JSON.stringify({
-       nome_disciplina: nome_disciplina,
-       carga_horaria: carga_horaria,
-       nome_professor: nome_professor
+       nome: nome_disciplina,
+       cargaHoraria: carga_horaria,
+       professor: nome_professor
        }),
 
     headers: headers

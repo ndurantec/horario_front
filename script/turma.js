@@ -1,11 +1,11 @@
 function salvar () {
-  const cadastro_turma = document.getElementById("cadastro_turma").value;
+  const nome = document.getElementById("nome").value;
   const sala = document.getElementById("sala").value;
   
 
   var headers = new Headers();    
   headers.append("Content-Type", "application/json");
-  headers.append("Access-Control-Allow-Origin", "http://127.0.0.1:5500");
+  headers.append("Access-Control-Allow-Origin", "*");
 
   fetch("http://127.0.0.1:8080/turma/insert" ,{
 
@@ -16,7 +16,7 @@ function salvar () {
     // Convertendo o objeto JavaScript para JSON
     // Esta parte é importante onde você deve passar os parametros (dados) da sua tela
     body: JSON.stringify({ 
-      turma: cadastro_turma,
+      nome: nome,
       sala: sala
      }),
 
@@ -31,7 +31,7 @@ function salvar () {
       console.log("Foi no servidor e voltou");
 
       //Esta linha carrega a página sucesso
-      window.location.href = "sucesso.html"    
+      //window.location.href = "sucesso.html"    
     } else {
       //Esta linha imprime a mensagem no console
       console.log("Aconteceu algo que não foi possivel salvar");
