@@ -19,11 +19,18 @@
 		<label for="carga_horaria">Carga Horária:</label>
 		<input type="text" id="carga_horaria">
 		<br>
-
-		<label for="nome_professor">Nome do Professor:</label>
-		<input type="text" id="nome_professor">
-		<br>
 		
+		<h2>Nome do Professor:</h2>
+		<select id="professor">
+			
+			<option></option>
+			<option>Karoline Ribeiro</option>
+			<option>Gisele Ruaro</option>
+			<option>Fernanda Pamplona</option>
+				<!--<option> th:each ="item : ${items}" th:value="${item.id}" th:text="${item.nome}"</option>-->
+		</select>
+
+
 		<div class="bnt-class">
 			<button type="button" id="submit-salvar" onclick="salvar()">Salvar</button>
 			<button type="button" id="submit-consultar" onclick="consultar()">Consultar</button>
