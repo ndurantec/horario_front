@@ -195,9 +195,9 @@ function apagar () {
   
     var headers = new Headers();    
     headers.append("Content-Type", "application/json");
-    headers.append('Access-Control-Allow-Origin', '*http://127.0.0.1:5500*&#39;);
+    headers.append('Access-Control-Allow-Origin', '*');
   
-    fetch('http://127.0.0.1:8080/operacao/findAll&#39; ,{
+    fetch('http://127.0.0.1:8080/operacao/findAll' ,{
   
       method: "GET",
       mode: "cors", // Usando 'cors' para permitir a requisição de origem cruzada
@@ -209,7 +209,7 @@ function apagar () {
       headers: headers
   
      
-    )}.then(response => response.json())
+    }).then(response => response.json())
     .then(data => {
         const comboBox = document.getElementById('Operacoes');
         data.forEach(operacao => {
@@ -220,8 +220,8 @@ function apagar () {
         });
     })
     .catch(error => console.error('Erro ao carregar locais:', error));
-  
      
+  
+  }
 }
-
 
