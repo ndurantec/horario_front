@@ -1,5 +1,5 @@
 body {
-    background-image: url('../image/fundo.jpg'); /* Substitua pelo caminho da sua imagem */
+    background-image: url('../image/fundo.png'); /* Substitua pelo caminho da sua imagem */
     background-size:100%; /* Ajusta a imagem para cobrir todo o fundo */
     background-repeat: no-repeat; /* Evita que a imagem se repita */
     margin: 0;
@@ -10,8 +10,13 @@ body {
     align-items: center;
     justify-content: center; /* Centraliza o conteúdo horizontalmente */
     padding: 30px 20px;
+<<<<<<< HEAD
     background-color: #097897;
     color: white; 
+=======
+    background-color: #333;
+    color: white;
+>>>>>>> ae136a02581fa74bf88a53daea889ea5267ac955
     position: relative; /* Para o uso de flexbox e centralização */
 }
 
