@@ -1,20 +1,27 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const link = document.getElementById('contabt');
+    const link = document.getElementById('grade_horariobt');
 
     // Define o destino do link dinamicamente
-    link.href = 'conta.html'; // Substitua pelo URL da página desejada
+    link.href = 'grade_horario.html'; // Substitua pelo URL da página desejada
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-    const link = document.getElementById('fluxobt');
+    const link = document.getElementById('disciplinabt');
 
     // Define o destino do link dinamicamente
-    link.href = 'fluxo.html'; // Substitua pelo URL da página desejada
+    link.href = 'disciplina.html'; // Substitua pelo URL da página desejada
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-    const link = document.getElementById('operacaobt');
+    const link = document.getElementById('cadastrar_profbt');
 
     // Define o destino do link dinamicamente
-    link.href = 'operacao.html'; // Substitua pelo URL da página desejada
+    link.href = 'professor.html'; // Substitua pelo URL da página desejada
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const link = document.getElementById('turmabt');
+
+    // Define o destino do link dinamicamente
+    link.href = 'turma.html'; // Substitua pelo URL da página desejada
 });
