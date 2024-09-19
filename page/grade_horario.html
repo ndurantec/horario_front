@@ -15,11 +15,21 @@
 		<label for="dia_semana">Aulas Semanais:</label>
 		<input type="text" id="dia_semana"><br>
 		<br>
-		<label for="posicao_aula">Posição de Aula:</label>
-		<input type="text" id="posicao_aula"><br>
-		<br>
+
+		<h2>Posição da Aula:</h2>
+		<select id="posicao_aula">
+			
+			<option></option>
+			<option>Primeira Aula</option>
+			<option>Segunda Aula</option>
+			<option>Terceira Aula</option>
+			<option>Quarta Aula</option>
+			<option>Quinta Aula</option>
+			<option>Sexta Aula</option>
+				<!--<option> th:each ="item : ${items}" th:value="${item.id}" th:text="${item.nome}"</option>-->
+		</select>
 		
-		<h2>Escolha um Professor:</h2>
+		<h3>Escolha um Professor:</h3>
 		<select id="professor">
 			
 			<option></option>
@@ -37,7 +47,7 @@
 		</div>
 		<!-- <button type="submit" onclick="executar()">Enviar</button> -->
 	</form>	
-	
+
 	<button onclick="window.location.href='../page/home.html'">Voltar para a página inicial</button>
 
 	<script src="../script/grade_horario.js"></script>
