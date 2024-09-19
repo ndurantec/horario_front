@@ -69,3 +69,13 @@ select{
   border: 1px solid #ccc;
   border-radius: 3px;
 }
+
+.Voltar{
+  width: 50px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 90px;
+  text-align: center;
+  background: #097897;
+  color: #fff;
+}
