@@ -10,13 +10,8 @@ body {
     align-items: center;
     justify-content: center; /* Centraliza o conteúdo horizontalmente */
     padding: 30px 20px;
-<<<<<<< HEAD
     background-color: #097897;
     color: white; 
-=======
-    background-color: #333;
-    color: white;
->>>>>>> ae136a02581fa74bf88a53daea889ea5267ac955
     position: relative; /* Para o uso de flexbox e centralização */
 }
 
