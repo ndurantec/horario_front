@@ -10,7 +10,7 @@ body {
     align-items: center;
     justify-content: center; /* Centraliza o conteúdo horizontalmente */
     padding: 30px 20px;
-    background-color: #333;
+    background-color: #097897;
     color: white; 
     position: relative; /* Para o uso de flexbox e centralização */
 }
@@ -49,6 +49,6 @@ body {
 }
 
 .nav ul li a:hover {
-    color: rgb(0, 136, 18); /* Cor dos links quando o mouse está sobre eles */
+    color: #addbf0; /* Cor dos links quando o mouse está sobre eles */
     text-decoration: underline; /* Opcional: adiciona sublinhado ao passar o mouse */
 }
