@@ -1,11 +1,11 @@
   function salvar () {
-    const professor = document.getElementById("nome_prof").value;
+    const nome = document.getElementById("nome").value;
     const cpf = document.getElementById("cpf").value;
     
 
     var headers = new Headers();    
     headers.append("Content-Type", "application/json");
-    headers.append("Access-Control-Allow-Origin", "http://127.0.0.1:5500");
+    headers.append("Access-Control-Allow-Origin", "*");
   
     fetch("http://127.0.0.1:8080/professor/insert",{
   
@@ -16,7 +16,7 @@
       // Convertendo o objeto JavaScript para JSON
       // Esta parte é importante onde você deve passar os parametros (dados) da sua tela
       body: JSON.stringify({ 
-        nome: professor,
+        nome: nome,
         cpf: cpf
        }),
   
@@ -48,13 +48,13 @@
 }
 
   function consultar () {
-    const professor = document.getElementById("professor").value;
+    const nome = document.getElementById("nome").value;
     const cpf = document.getElementById("cpf").value;
  
 
     var headers = new Headers();    
     headers.append("Content-Type", "application/json");
-    headers.append("Access-Control-Allow-Origin", "http://127.0.0.1:5500");
+    headers.append("Access-Control-Allow-Origin", "*");
   
     fetch("http://127.0.0.1:8080/professor/findByld" ,{
   
@@ -65,7 +65,7 @@
       // Convertendo o objeto JavaScript para JSON
       // Esta parte é importante onde você deve passar os parametros (dados) da sua tela
       body: JSON.stringify({ 
-        nome: professor,
+        nome: nome,
         cpf: cpf
        }),
   
@@ -95,13 +95,13 @@
 }
 
   function alterar() {  
-    const professor = document.getElementById("nome_prof").value;
+    const nome = document.getElementById("nome").value;
     const cpf = document.getElementById("cpf").value;
  
 
     var headers = new Headers();    
     headers.append("Content-Type", "application/json");
-    headers.append("Access-Control-Allow-Origin", "http://127.0.0.1:5500");
+    headers.append("Access-Control-Allow-Origin", "*");
   
     fetch("http://127.0.0.1:8080/professor/update" ,{
   
@@ -112,7 +112,7 @@
       // Convertendo o objeto JavaScript para JSON
       // Esta parte é importante onde você deve passar os parametros (dados) da sua tela
       body: JSON.stringify({ 
-        nome: professor,
+        nome: nome,
         cpf: cpf      
       }),
   
@@ -142,13 +142,13 @@
 }
 
   function apagar () {
-    const professor = document.getElementById("nome_prof").value;
+    const nome = document.getElementById("nome").value;
     const cpf = document.getElementById("cpf").value;
  
 
     var headers = new Headers();    
     headers.append("Content-Type", "application/json");
-    headers.append("Access-Control-Allow-Origin", "http://127.0.0.1:5500");
+    headers.append("Access-Control-Allow-Origin", "*");
 
   fetch("http://127.0.0.1:8080/professor/delete" ,{
 
@@ -159,7 +159,7 @@
     // Convertendo o objeto JavaScript para JSON
     // Esta parte é importante onde você deve passar os parametros (dados) da sua tela
     body: JSON.stringify({ 
-      nome: professor,
+      nome: nome,
       cpf: cpf
      }),
 
