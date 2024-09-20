@@ -49,7 +49,7 @@ function salvar () {
       console.log('Foi no servidor e voltou');
 
       //Esta linha carrega a página sucesso
-      window.location.href = 'sucesso.html'    
+      //window.location.href = 'sucesso.html'    
 
   })
   //Aqui será executado caso a then não seja chamado
@@ -159,13 +159,18 @@ function salvar () {
   function apagar () {
     const nome = document.getElementById("nome").value;
     const cpf = document.getElementById("cpf").value;
+
+    const id_professor = localStorage.getItem('id_professor');
+    console.log(id_professor);
  
 
     var headers = new Headers();    
     headers.append("Content-Type", "application/json");
     headers.append("Access-Control-Allow-Origin", "*");
 
-  fetch("http://127.0.0.1:8080/professor/delete" ,{
+    console.log(`http://127.0.0.1:8080/professor/${id_professor}`);
+
+    fetch(`http://127.0.0.1:8080/professor/${id_professor}` ,{
 
     method: "DELETE",
     mode: "cors", // Usando 'cors' para permitir a requisição de origem cruzada
@@ -173,10 +178,10 @@ function salvar () {
    
     // Convertendo o objeto JavaScript para JSON
     // Esta parte é importante onde você deve passar os parametros (dados) da sua tela
-    body: JSON.stringify({ 
-      nome: nome,
-      cpf: cpf
-     }),
+    // body: JSON.stringify({ 
+    //   nome: nome,
+    //   cpf: cpf
+    //  }),
 
     headers: headers
 
