@@ -47,14 +47,16 @@ btn-class {
   justify-content: space-between;
 }
 
-button {
+button{
   width: 120px;
-  border: 1px solid #ccc;
+  background-color: #ccc;
+  border:1px solid ;
   border-radius: 3px;
   padding: 10px;
   text-align: center;
   background: #097897;
-  color: #fff;
+  color:#fff;
+  
 }
 
 button[type="button"]:hover {
