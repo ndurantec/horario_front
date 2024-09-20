@@ -49,7 +49,7 @@ function salvar () {
       console.log('Foi no servidor e voltou');
 
       //Esta linha carrega a página sucesso
-      //window.location.href = 'sucesso.html'    
+      window.location.href = 'sucesso.html'    
 
   })
   //Aqui será executado caso a then não seja chamado
@@ -89,7 +89,7 @@ function salvar () {
         console.log("Foi no servidor e voltou");
   
         //Esta linha carrega a página sucesso
-        window.location.href = "sucesso.html"    
+        window.location.href = "sucesso2.html"    
       } else {
         //Esta linha imprime a mensagem no console
         console.log("Aconteceu algo que não foi possivel salvar");
@@ -142,7 +142,7 @@ function salvar () {
         console.log("Foi no servidor e voltou");
   
         //Esta linha carrega a página sucesso
-        window.location.href = "sucesso.html"    
+        window.location.href = "sucesso3.html"    
       } else {
         //Esta linha imprime a mensagem no console
         console.log("Aconteceu algo que não foi possivel salvar");
@@ -189,7 +189,7 @@ function salvar () {
       console.log("Foi no servidor e voltou");
 
       //Esta linha carrega a página sucesso
-      window.location.href = "sucesso.html"    
+      window.location.href = "sucesso4.html"    
     } else {
       //Esta linha imprime a mensagem no console
       console.log("Aconteceu algo que não foi possivel salvar");
