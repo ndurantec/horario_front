@@ -104,10 +104,10 @@ select{
   display: flex;
   justify-content: center;
   margin-top: 3rem;
-  background-color: #3273d4;
+  background-color: #001d2e;
   transition: 0.6s;
 }
 
 .button-home:hover{
-  background-color: #a3cae4;
+  background-color: #097897;
 }
