@@ -66,7 +66,7 @@ button{
   text-align: center;
   background: #097897;
   color:#fff;
-  
+   
 }
 
 button[type="button"]:hover {
@@ -76,9 +76,18 @@ button[type="button"]:hover {
 select{
   padding-top: 0px;
   margin-bottom: 60px;
-  padding: 10px 227px;
+  padding: 10px 245px;
   border: 1px solid #ccc;
   border-radius: 3px;
+}
+
+
+#turma{
+  padding-top: 0px;
+  margin-bottom: 60px;
+  padding: 10px 256px;
+  border: 1px solid #ccc;
+  border-radius: 3px
 }
 
 .voltar {
@@ -90,4 +99,18 @@ select{
   background: #097897;
   color: #fff;
   align-items: center;
+}
+
+
+.button-home{
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+  background-color: #3273d4;
+  transition: 0.6s;
+}
+
+.button-home:hover{
+  background-color: #a3cae4;
 }
