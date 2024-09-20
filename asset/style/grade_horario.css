@@ -38,6 +38,10 @@ h2{
   font-size: 16px;
 }
 
+h3{
+  font-size: 16px;
+}
+
 input[type="text"] {
   display: block;
   width: 95%;
@@ -46,21 +50,28 @@ input[type="text"] {
   border: 1px solid #ccc;
   border-radius: 3px;
 }
+.bnt-class{
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
 
-button {
+}
+
+button{
   width: 120px;
-  border: 1px solid #ccc;
+  background-color: #ccc;
+  border:1px solid ;
   border-radius: 3px;
   padding: 10px;
   text-align: center;
   background: #097897;
-  color: #fff;
+  color:#fff;
+  
 }
 
 button[type="button"]:hover {
   background-color: #479bd3;
 }
-
 
 select{
   padding-top: 0px;
@@ -78,4 +89,5 @@ select{
   text-align: center;
   background: #097897;
   color: #fff;
+  align-items: center;
 }
