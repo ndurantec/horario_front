@@ -50,11 +50,9 @@ input[type="text"] {
   border: 1px solid #ccc;
   border-radius: 3px;
 }
-.bnt-class{
+.btn-class{
   display: flex;
   justify-content: space-between;
-  gap: 1rem;
-
 }
 
 button{
@@ -66,6 +64,8 @@ button{
   text-align: center;
   background: #097897;
   color:#fff;
+  cursor: pointer;
+  
    
 }
 
