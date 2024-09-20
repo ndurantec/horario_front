@@ -2,6 +2,8 @@
     const nome = document.getElementById("nome").value;
     const cpf = document.getElementById("cpf").value;
     
+    console.log(nome);
+    console.log(cpf);
 
     var headers = new Headers();    
     headers.append("Content-Type", "application/json");
