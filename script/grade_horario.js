@@ -1,6 +1,10 @@
+document.addEventListener("DOMContentLoaded", function() {
+  carregarComboTurma();
+});
+
 function salvar () {
-  const dia_semana = document.getElementById("dia_semana").value;
-  const posicao_aula = document.getElementById("posicao_aula").value;
+  const diaDaSemana = document.getElementById("diaDaSemana").value;
+  const posicaoDaAula = document.getElementById("posicaoDaAula").value;
   
 
   var headers = new Headers();    
@@ -16,8 +20,8 @@ function salvar () {
     // Convertendo o objeto JavaScript para JSON
     // Esta parte é importante onde você deve passar os parametros (dados) da sua tela
     body: JSON.stringify({ 
-      dia_semana: dia_semana,
-      posicao_aula: posicao_aula
+      diaDaSemana: diaDaSemana,
+      posicaoDaAula: posicaoDaAula
      }),
 
     headers: headers
@@ -46,8 +50,8 @@ function salvar () {
 }
 
 function consultar () {
-  const dia_semana = document.getElementById("dia_semana").value;
-  const posicao_aula = document.getElementById("posicao_aula").value;
+  const diaDaSemana = document.getElementById("diaDaSemana").value;
+  const posicaoDaAula = document.getElementById("posicaoDaAula").value;
   
 
   var headers = new Headers();    
@@ -63,8 +67,8 @@ function consultar () {
     // Convertendo o objeto JavaScript para JSON
     // Esta parte é importante onde você deve passar os parametros (dados) da sua tela
     body: JSON.stringify({ 
-      dia_semana: dia_semana,
-      posicao_aula: posicao_aula
+      diaDaSemana: diaDaSemana,
+      posicaoDaAula: posicaoDaAula
      }),
 
     headers: headers
@@ -93,8 +97,8 @@ function consultar () {
 }
 
 function alterar () {
-  const dia_semana = document.getElementById("dia_semana").value;
-  const posicao_aula = document.getElementById("posicao_aula").value;
+  const diaDaSemana = document.getElementById("diaDaSemana").value;
+  const posicaoDaAula = document.getElementById("posicaoDaAula").value;
   
 
   var headers = new Headers();    
@@ -110,8 +114,8 @@ function alterar () {
     // Convertendo o objeto JavaScript para JSON
     // Esta parte é importante onde você deve passar os parametros (dados) da sua tela
     body: JSON.stringify({ 
-      dia_semana: dia_semana,
-      posicao_aula: posicao_aula
+      diaDaSemana: diaDaSemana,
+      posicaoDaAula: posicaoDaAula
      }),
 
     headers: headers
@@ -140,8 +144,8 @@ function alterar () {
 }
 
 function apagar () {
-  const dia_semana = document.getElementById("dia_semana").value;
-  const posicao_aula = document.getElementById("posicao_aula").value;
+  const diaDaSemana = document.getElementById("diaDaSemana").value;
+  const posicaoDaAula = document.getElementById("posicaoDaAula").value;
   
 
   var headers = new Headers();    
@@ -157,8 +161,8 @@ function apagar () {
     // Convertendo o objeto JavaScript para JSON
     // Esta parte é importante onde você deve passar os parametros (dados) da sua tela
     body: JSON.stringify({ 
-      dia_semana: dia_semana,
-      posicao_aula: posicao_aula
+      diaDaSemana: diaDaSemana,
+      posicaoDaAula: posicaoDaAula
      }),
 
     headers: headers
@@ -185,43 +189,40 @@ function apagar () {
   //Aqui será executado caso a then não seja chamado
   .catch(error => console.error("Erro!:", error));
 
-  document.addEventListener("DOMContentLoaded", function() {
-    carregarComboProfessor();
-  });
+}
 
-  function carregarComboOperacao() {
+function carregarComboTurma() {
  
-    //console.log('Carregou a página e chamou a função');
-  
-    var headers = new Headers();    
-    headers.append("Content-Type", "application/json");
-    headers.append('Access-Control-Allow-Origin', '*');
-  
-    fetch('http://127.0.0.1:8080/operacao/findAll' ,{
-  
-      method: "GET",
-      mode: "cors", // Usando 'cors' para permitir a requisição de origem cruzada
-      cache: "no-cache",
-     
-      // Convertendo o objeto JavaScript para JSON
-      // Esta parte é importante onde você deve passar os parametros (dados) da sua tela
-  
-      headers: headers
-  
-     
-    }).then(response => response.json())
-    .then(data => {
-        const comboBox = document.getElementById('Operacoes');
-        data.forEach(operacao => {
-            const option = document.createElement('option');
-            option.value = operacao.id;
-            option.textContent = operacao.nome;
-            comboBox.appendChild(option);
-        });
-    })
-    .catch(error => console.error('Erro ao carregar locais:', error));
-     
-  
-  }
+  //console.log('Carregou a página e chamou a função');
+
+  var headers = new Headers();    
+  headers.append("Content-Type", "application/json");
+  headers.append('Access-Control-Allow-Origin', '*');
+
+  fetch('http://127.0.0.1:8080/turma/findAll' ,{
+
+    method: "GET",
+    mode: "cors", // Usando 'cors' para permitir a requisição de origem cruzada
+    cache: "no-cache",
+   
+    // Convertendo o objeto JavaScript para JSON
+    // Esta parte é importante onde você deve passar os parametros (dados) da sua tela
+
+    headers: headers
+
+   
+  }).then(response => response.json())
+  .then(data => {
+      const comboBox = document.getElementById('Turmas');
+      data.forEach(turma => {
+          const option = document.createElement('option');
+          option.value = turma.id;
+          option.textContent = turma.nome;
+          comboBox.appendChild(option);
+      });
+  })
+  .catch(error => console.error('Erro ao carregar locais:', error));
+   
+
 }
 

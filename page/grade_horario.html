@@ -12,8 +12,8 @@
 <body>
 	<h1>Grade de Horario</h1>
 	<form id="grade_de_horario">
-		<label for="dia_semana">Aulas Semanais:</label>
-		<input type="text" id="dia_semana"><br>
+		<label for="diaDaSemana">Dia da semana:</label>
+		<input type="text" id="diaDaSemana"><br>
 		<br>
 
 		<h2>Posição da Aula:</h2>
@@ -28,16 +28,13 @@
 			<option>Sexta Aula</option>
 				<!--<option> th:each ="item : ${items}" th:value="${item.id}" th:text="${item.nome}"</option>-->
 		</select>
-		
-		<h3>Escolha um Professor:</h3>
-		<select id="professor">
-			
-			<option></option>
-			<option>Karoline Ribeiro</option>
-			<option>Gisele Ruaro</option>
-			<option>Fernanda Pamplona</option>
-				<!--<option> th:each ="item : ${items}" th:value="${item.id}" th:text="${item.nome}"</option>-->
-		</select>
+
+
+		<label for="turma">Turma:</label>
+        <select name="accont" id="turma">
+            <option value="professor">Todas as Turmas</option>
+			<!--<option> th:each ="item : ${items}" th:value="${item.id}" th:text="${item.nome}"</option>-->
+        </select>
 
 		<div class="btn-class">
 			<button type="button" id="submit-btn-salvar" onclick="salvar()">Salvar</button>		

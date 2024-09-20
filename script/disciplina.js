@@ -1,11 +1,15 @@
-function salvar() {
-  const nome_disciplina = document.getElementById("nome_disciplina").value;                                                  
-  const carga_horaria = Number(document.getElementById("carga_horaria").value);
-  const nome_professor = Number(document.getElementById("nome_professor").value);
+document.addEventListener("DOMContentLoaded", function() {
+  carregarComboProfessor();
+});
 
-  console.log(nome_disciplina);
-  console.log(carga_horaria);
-  console.log(nome_professor);
+function salvar() {
+  const nome = document.getElementById("nome").value;                                                  
+  const cargaHoraria = Number(document.getElementById("cargaHoraria").value);
+  const professor = Number(document.getElementById("professor").value);
+
+  console.log(nome);
+  console.log(cargaHoraria);
+  console.log(professor);
 
 
   var headers = new Headers();    
@@ -21,9 +25,9 @@ function salvar() {
     // Convertendo o objeto JavaScript para JSON
     // Esta parte é importante onde você deve passar os parametros (dados) da sua tela
     body: JSON.stringify({
-       nome: nome_disciplina,
-       cargaHoraria: carga_horaria,
-       professor: nome_professor
+       nome: nome,
+       cargaHoraria: cargaHoraria,
+       professor: professor
        }),
 
     headers: headers
@@ -52,13 +56,13 @@ function salvar() {
 }
 
 function consultar() {
-  const nome_disciplina = document.getElementById("nome_disciplina").value;
-  const carga_horaria = document.getElementById("carga_horaria").value;
-  const nome_professor = document.getElementById("nome_professor").value;
+  const nome = document.getElementById("nome").value;
+  const cargaHoraria = document.getElementById("cargaHoraria").value;
+  const professor = document.getElementById("professor").value;
 
   var headers = new Headers();    
   headers.append("Content-Type", "application/json");
-  headers.append("Access-Control-Allow-Origin", "http://127.0.0.1:5500");
+  headers.append("Access-Control-Allow-Origin", "*");
 
   fetch("http://127.0.0.1:8080/disciplina/findByld" ,{
 
@@ -69,9 +73,9 @@ function consultar() {
     // Convertendo o objeto JavaScript para JSON
     // Esta parte é importante onde você deve passar os parametros (dados) da sua tela
     body: JSON.stringify({ 
-        nome_disciplina: nome_disciplina,
-        carga_horaria: carga_horaria,
-        nome_professor: nome_professor
+        nome: nome,
+        cargaHoraria: cargaHoraria,
+        professor: professo
      }),
 
     headers: headers
@@ -100,14 +104,14 @@ function consultar() {
 }
 
 function alterar() {
-  const nome_disciplina = document.getElementById("nome_disciplina").value;
-  const carga_horaria = document.getElementById("carga_horaria").value;
-  const nome_professor = document.getElementById("nome_professor").value;
+  const nome = document.getElementById("nome").value;
+  const cargaHoraria = document.getElementById("cargaHoraria").value;
+  const professo = document.getElementById("professo").value;
  
 
   var headers = new Headers();    
   headers.append("Content-Type", "application/json");
-  headers.append("Access-Control-Allow-Origin", "http://127.0.0.1:5500");
+  headers.append("Access-Control-Allow-Origin", "*");
 
   fetch("http://127.0.0.1:8080/disciplina/update" ,{
 
@@ -118,9 +122,9 @@ function alterar() {
     // Convertendo o objeto JavaScript para JSON
     // Esta parte é importante onde você deve passar os parametros (dados) da sua tela
     body: JSON.stringify({ 
-        nome_disciplina: nome_disciplina,
-        carga_horaria: carga_horaria,
-        nome_professor: nome_professor }),
+        nome: nome,
+        cargaHoraria: cargaHoraria,
+        professo: professor }),
 
     headers: headers
 
@@ -148,14 +152,14 @@ function alterar() {
 }
 
 function apagar() {
-  const nome_disciplina = document.getElementById("nome_disciplina").value;
-  const carga_horaria = document.getElementById("carga_horaria").value;
-  const nome_professor = document.getElementById("nome_professor").value;
+  const nome = document.getElementById("nome").value;
+  const cargaHoraria = document.getElementById("cargaHoraria").value;
+  const professor = document.getElementById("professor").value;
  
 
     var headers = new Headers();    
     headers.append("Content-Type", "application/json");
-    headers.append("Access-Control-Allow-Origin", "http://127.0.0.1:5500");
+    headers.append("Access-Control-Allow-Origin", "*");
 
   fetch("http://127.0.0.1:8080/disciplina/delete" ,{
 
@@ -166,9 +170,9 @@ function apagar() {
     // Convertendo o objeto JavaScript para JSON
     // Esta parte é importante onde você deve passar os parametros (dados) da sua tela
     body: JSON.stringify({
-        nome_disciplina: nome_disciplina,
-        carga_horaria: carga_horaria,
-        nome_professor: nome_professor }),
+        nome: nome,
+        cargaHoraria: cargaHoraria,
+        professor: professor }),
 
     headers: headers
 
@@ -193,40 +197,37 @@ function apagar() {
   })
   //Aqui será executado caso a then não seja chamado
   .catch(error => console.error("Erro!:", error));
-
-  function carregarComboOperacao() {
- 
-    //console.log('Carregou a página e chamou a função');
-  
-    var headers = new Headers();    
-    headers.append("Content-Type", "application/json");
-    headers.append('Access-Control-Allow-Origin', '*');
-  
-    fetch('http://127.0.0.1:8080/operacao/findAll' ,{
-  
-      method: "GET",
-      mode: "cors", // Usando 'cors' para permitir a requisição de origem cruzada
-      cache: "no-cache",
-     
-      // Convertendo o objeto JavaScript para JSON
-      // Esta parte é importante onde você deve passar os parametros (dados) da sua tela
-  
-      headers: headers
-  
-     
-    }).then(response => response.json())
-    .then(data => {
-        const comboBox = document.getElementById('Operacoes');
-        data.forEach(operacao => {
-            const option = document.createElement('option');
-            option.value = operacao.id;
-            option.textContent = operacao.nome;
-            comboBox.appendChild(option);
-        });
-    })
-    .catch(error => console.error('Erro ao carregar locais:', error));
-     
-  
-  }
 }
 
+function carregarComboprofessor() {
+ 
+  console.log('Carregou o Combo professor e chamou a função');
+
+  var headers = new Headers();    
+  headers.append("Content-Type", "application/json");
+  headers.append('Access-Control-Allow-Origin', '*');
+
+  fetch('http://127.0.0.1:8080/professor/findAll' ,{
+
+    method: "GET",
+    mode: "cors", // Usando 'cors' para permitir a requisição de origem cruzada
+    cache: "no-cache",
+   
+    // Convertendo o objeto JavaScript para JSON
+    // Esta parte é importante onde você deve passar os parametros (dados) da sua tela
+
+    headers: headers
+
+   
+  }).then(response => response.json())
+  .then(data => {
+      const comboBox = document.getElementById('professor');
+      data.forEach(professor => {
+          const option = document.createElement('option');
+          option.value = professor.id;
+          option.textContent = professor.nome;
+          comboBox.appendChild(option);
+      });
+  })
+  .catch(error => console.error('Erro ao carregar locais:', error));
+}
