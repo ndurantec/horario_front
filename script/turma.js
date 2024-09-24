@@ -1,3 +1,7 @@
+document.addEventListener("DOMContentLoaded", function() {
+  localStorage.setItem('id_turma', '');
+});
+
 function salvar () {
   const nome = document.getElementById("nome").value;
   const sala = document.getElementById("sala").value;
@@ -26,19 +30,29 @@ function salvar () {
   }).then(response => {
 
     if(response.ok) {
-
-      //Esta linha imprime a mensagem no concole
-      console.log("Foi no servidor e voltou");
-
-      //Esta linha carrega a página sucesso
-      window.location.href = "sucesso.html"    
+      return response.json(); //transforma a resposta em JSON
     } else {
       //Esta linha imprime a mensagem no console
-      console.log("Aconteceu algo que não foi possivel salvar");
-
+      console.log('Aconteceu algo que não foi possivel salvar');
       //Esta linha imprime a mensagem de erro
-      throw new Error("Erro ao tentar salvar");
+      throw new Error('Erro ao tentar salvar');
+    
     }
+
+  })
+
+  .then(data => {
+    //aqui você pode acessar o 'id' retornado do back end
+    const id_turma = data.id;
+    console.log('ID do registro salvo:', id_turma);
+
+    //se quiser armazenar o ID no localStorage
+    localStorage.setItem('id_turma', id_turma);
+
+      console.log('Foi no servidor e voltou');
+
+      //Esta linha carrega a página sucesso
+      //window.location.href = 'sucesso.html'    
 
   })
   //Aqui será executado caso a then não seja chamado
@@ -46,13 +60,13 @@ function salvar () {
 }
 
 function consultar () {
-  const cadastro_turma = document.getElementById("cadastro_turma").value;
+  const nome = document.getElementById("nome").value;
   const sala = document.getElementById("sala").value;
   
 
   var headers = new Headers();    
   headers.append("Content-Type", "application/json");
-  headers.append("Access-Control-Allow-Origin", "http://127.0.0.1:5500");
+  headers.append("Access-Control-Allow-Origin", "*");
 
   fetch("http://127.0.0.1:8080/turma/findByld" ,{
 
@@ -63,7 +77,7 @@ function consultar () {
     // Convertendo o objeto JavaScript para JSON
     // Esta parte é importante onde você deve passar os parametros (dados) da sua tela
     body: JSON.stringify({ 
-      turma: cadastro_turma,
+      nome: nome,
       sala: sala
      }),
 
@@ -93,15 +107,20 @@ function consultar () {
 }
 
 function alterar () {
-  const cadastro_turma = document.getElementById("cadastro_turma").value;
+  const nome = document.getElementById("nome").value;
   const sala = document.getElementById("sala").value;
+
+  const id_turma = localStorage.getItem('id_turma');
+  console.log(id_turma);
   
 
   var headers = new Headers();    
   headers.append("Content-Type", "application/json");
-  headers.append("Access-Control-Allow-Origin", "http://127.0.0.1:5500");
+  headers.append("Access-Control-Allow-Origin", "*");
 
-  fetch("http://127.0.0.1:8080/turma/update" ,{
+  console.log(`http://127.0.0.1:8080/turma/${id_turma}`);
+
+  fetch(`http://127.0.0.1:8080/turma/${id_turma}` ,{
 
     method: "PUT",
     mode: "cors", // Usando 'cors' para permitir a requisição de origem cruzada
@@ -110,7 +129,7 @@ function alterar () {
     // Convertendo o objeto JavaScript para JSON
     // Esta parte é importante onde você deve passar os parametros (dados) da sua tela
     body: JSON.stringify({ 
-      turma: cadastro_turma,
+      nome: nome,
       sala: sala
      }),
 
@@ -140,26 +159,31 @@ function alterar () {
 }
 
 function apagar () {
-  const cadastro_turma = document.getElementById("cadastro_turma").value;
+  const nome = document.getElementById("nome").value;
   const sala = document.getElementById("sala").value;
+
+  const id_turma = localStorage.getItem('id_turma');
+    console.log(id_turma);
   
 
   var headers = new Headers();    
   headers.append("Content-Type", "application/json");
-  headers.append("Access-Control-Allow-Origin", "http://127.0.0.1:5500");
+  headers.append("Access-Control-Allow-Origin", "*");
 
-  fetch("http://127.0.0.1:8080/turma/delete" ,{
+  console.log(`http://127.0.0.1:8080/turma/${id_turma}`);
+
+  fetch(`http://127.0.0.1:8080/turma/${id_turma}` ,{
 
     method: "DELETE",
     mode: "cors", // Usando 'cors' para permitir a requisição de origem cruzada
     cache: "no-cache",
    
-    // Convertendo o objeto JavaScript para JSON
-    // Esta parte é importante onde você deve passar os parametros (dados) da sua tela
-    body: JSON.stringify({ 
-      turma: cadastro_turma,
-      sala: sala
-     }),
+    //  Convertendo o objeto JavaScript para JSON
+    //  Esta parte é importante onde você deve passar os parametros (dados) da sua tela
+    //  body: JSON.stringify({ 
+    //  nome: nome,
+    //  sala: sala
+    //  }),
 
     headers: headers
 
