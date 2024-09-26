@@ -31,7 +31,7 @@ body {
 .nav ul li {
     margin: 0 15px; /* Espaço entre os links */
 }
-
+  
 .nav ul li a {
     color: black; /* Cor padrão dos links */
     text-decoration: none; /* Remove o sublinhado dos links */
