@@ -60,50 +60,52 @@ function salvar () {
 }
 
 function consultar () {
-  const nome = document.getElementById("nome").value;
-  const sala = document.getElementById("sala").value;
-  
+  const nome = document.getElementById('nome').value;
 
-  var headers = new Headers();    
-  headers.append("Content-Type", "application/json");
-  headers.append("Access-Control-Allow-Origin", "*");
+console.log(nome)
 
-  fetch("http://127.0.0.1:8080/turma/findByld" ,{
+// Cabeçalho não visivel para o usuario
+var headers = new Headers();    
+headers.append("Content-Type", "application/json");
+headers.append('Access-Control-Allow-Origin', '*');
 
-    method: "GET",
-    mode: "cors", // Usando 'cors' para permitir a requisição de origem cruzada
-    cache: "no-cache",
-   
-    // Convertendo o objeto JavaScript para JSON
-    // Esta parte é importante onde você deve passar os parametros (dados) da sua tela
-    body: JSON.stringify({ 
-      nome: nome,
-      sala: sala
-     }),
+fetch(`http://127.0.0.1:8080/turma/consultarPorNome?nome=${nome}` ,{
 
-    headers: headers
+  method: "GET",
 
-    //Aqui inicia função then
-  }).then(response => {
 
-    if(response.ok) {
+  //mode: "cors", // Usando 'cors' para permitir a requisição de origem cruzada
+  //cache: "no-cache",
+ 
+  // Convertendo o objeto JavaScript para JSON
+  // Esta parte é importante onde você deve passar os parametros (dados) da sua tela
+  //body: JSON.stringify({ nome: nome}),
 
-      //Esta linha imprime a mensagem no concole
-      console.log("Foi no servidor e voltou");
+  headers: {
+    'Content-Type' : 'application/json'
+  }
 
-      //Esta linha carrega a página sucesso
-      window.location.href = "sucesso2.html"    
-    } else {
-      //Esta linha imprime a mensagem no console
-      console.log("Aconteceu algo que não foi possivel salvar");
+  //Aqui inicia função then
+})
+.then(response => {
 
-      //Esta linha imprime a mensagem de erro
-      throw new Error("Erro ao tentar salvar");
-    }
+  if (!response.ok) {
+    throw new Error('Erro ao buscar professores')
+  } 
+  return response.json();
+})
+.then(id_turma => {
+  console.log("ID da conta recebida:", id_turma); // Aqui o id é diretamente o retorno
 
-  })
-  //Aqui será executado caso a then não seja chamado
-  .catch(error => console.error("Erro!:", error));
+    localStorage.setItem('id_turma', JSON.stringify(id_turma));
+
+    console.log('Id dos professores foram salvos no localStorage')
+    
+ 
+})
+.catch(error => {
+  console.error("Erro capturado no catch:", error);
+});
 }
 
 function alterar () {
