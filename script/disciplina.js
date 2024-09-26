@@ -199,13 +199,13 @@ function apagar() {
   .catch(error => console.error("Erro!:", error));
 }
 
-function carregarComboprofessor() {
+function carregarProfessor() {
  
-  console.log('Carregou o Combo professor e chamou a função');
+  //console.log('Carregou a página e chamou a função');
 
   var headers = new Headers();    
   headers.append("Content-Type", "application/json");
-  headers.append('Access-Control-Allow-Origin', '*');
+  headers.append('Access-Control-Allow-Origin', '*http://127.0.0.1:5500*');
 
   fetch('http://127.0.0.1:8080/professor/findAll' ,{
 
@@ -218,10 +218,10 @@ function carregarComboprofessor() {
 
     headers: headers
 
-   
+    
   }).then(response => response.json())
   .then(data => {
-      const comboBox = document.getElementById('professor');
+      const comboBox = document.getElementById('Professor');
       data.forEach(professor => {
           const option = document.createElement('option');
           option.value = professor.id;
@@ -230,4 +230,6 @@ function carregarComboprofessor() {
       });
   })
   .catch(error => console.error('Erro ao carregar locais:', error));
+   
+
 }
