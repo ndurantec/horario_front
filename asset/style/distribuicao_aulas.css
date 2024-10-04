@@ -8,14 +8,21 @@ body {
 
   /* Estilos do formulário */
 form {
+    width: 200%;
+    height: 200%;
     float: right; 
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto;
     padding: 20px;
     border: 1px solid #3273d4;
     border-radius: 5px;
     background-color: #a3cae4;
 
+  }
+
+  table{
+    width: 100%;
+    height: 100%;
   }
 
   label {
