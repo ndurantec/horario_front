@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Formulário</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">	
+	<link rel="stylesheet" href="../asset/style/disciplina.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+	<h1>Cadastro   </h1>
+
+		
+		<label for="disciplina_professor">Professores:</label>
+		<select name="accont" id="professor">
+			<option value="professor"></option>
+            
+			<option>Amanda Santino</option>
+			<option>Juliana Gonçalvez</option>
+			<option>Vilma Da Silva</option>
+
+		</select><br>
+		<br>
+		
+		<div class="bnt-class">
+			<button type="button" id="submit-salvar" onclick="salvar()">Salvar</button>
+			<button type="button" id="submit-consultar" onclick="consultar()">Consultar</button>
+			<button type="button" id="submit-alterar" onclick="alterar()">Alterar</button>
+			<button type="button" id="submit-apagar" onclick="apagar()">Apagar</button>
+		</div>
+		
+	</form>	
+	
+	<button class="button-home" onclick="window.location.href='../page/home.html'">Voltar para a página inicial</button>
+	
+	<script src="../script/distribuicao_aulas.js"></script>
+</body>
+</html>
