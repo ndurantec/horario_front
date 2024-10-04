@@ -20,21 +20,13 @@
 		<input type="text" id="carga_horaria">
 		<br>
 		
-		<h2>Todos os Professores:</h2>
-		<select id="professor">
-			
-			<option></option>
-			<option>Karoline Ribeiro</option>
-			<option>Gisele Ruaro</option>
-			<option>Jonathan Harrison</option>
-			<option>Fernanda Machado</option>
-			<option>Norberto Garcia</option>
-			<option>Marcos Vinicios</option>
-				<!--<option> th:each ="item : ${items}" th:value="${item.id}" th:text="${item.nome}"</option>-->
-		</select>
-		
-
-				<!--<option> th:each ="item : ${items}" th:value="${item.id}" th:text="${item.nome}"</option>-->
+		<label for="disciplina_professor">Todos os Professor:</label>
+		<select name="accont" id="professor">
+			<option value="professor">Todos os Professores</option>
+		</select><br>
+		<br>
+		<br>
+		<br>
 		
 		<div class="bnt-class">
 			<button type="button" id="submit-salvar" onclick="salvar()">Salvar</button>
@@ -42,8 +34,7 @@
 			<button type="button" id="submit-alterar" onclick="alterar()">Alterar</button>
 			<button type="button" id="submit-apagar" onclick="apagar()">Apagar</button>
 		</div>
-
-		<!-- <button type="submit" onclick="executar()">Enviar</button> -->
+		
 	</form>	
 	
 	<button class="button-home" onclick="window.location.href='../page/home.html'">Voltar para a página inicial</button>

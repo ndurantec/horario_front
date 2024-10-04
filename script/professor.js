@@ -66,37 +66,39 @@ function salvar () {
   headers.append("Content-Type", "application/json");
   headers.append('Access-Control-Allow-Origin', '*');
 
-  fetch("http://127.0.0.1:8080/professor/nome" ,{
+  fetch(`http://127.0.0.1:8080/professor/consultarPorNome?nome=${nome}` ,{
 
     method: "GET",
-    mode: "cors", // Usando 'cors' para permitir a requisição de origem cruzada
-    cache: "no-cache",
+
+
+    //mode: "cors", // Usando 'cors' para permitir a requisição de origem cruzada
+    //cache: "no-cache",
    
     // Convertendo o objeto JavaScript para JSON
     // Esta parte é importante onde você deve passar os parametros (dados) da sua tela
     //body: JSON.stringify({ nome: nome}),
 
-    headers: headers
+    headers: {
+      'Content-Type' : 'application/json'
+    }
 
     //Aqui inicia função then
-  }).then(response => {
+  })
+  .then(response => {
 
-    if (response.ok) {
-      return response.text(); // Usamos text() para lidar com retorno direto (não é JSON)
-    } else {
-      console.error('Erro na resposta da API');
-      throw new Error('Erro ao tentar buscar a conta');
-    }
+    if (!response.ok) {
+      throw new Error('Erro ao buscar professores')
+    } 
+    return response.json();
   })
   .then(id_professor => {
     console.log("ID da conta recebida:", id_professor); // Aqui o id é diretamente o retorno
 
-    if (id_professor) {
-      localStorage.setItem('id_professor', id_professor);
-      alert("item achado com sucesso! agora é possivel alterar ou deletar a conta selecionada ");
-    } else {
-      console.error("ID não encontrado na resposta");
-    }
+      localStorage.setItem('id_professor', JSON.stringify(id_professor));
+
+      console.log('Id dos professores foram salvos no localStorage')
+      
+   
   })
   .catch(error => {
     console.error("Erro capturado no catch:", error);

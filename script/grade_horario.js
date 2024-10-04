@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function salvar () {
   const diaDaSemana = document.getElementById("diaDaSemana").value;
-  const posicaoDaAula = document.getElementById("posicaoDaAula").value;
+  const posicaoDaAula = document.getElementById("posicao_aula").value;
   
 
   var headers = new Headers();    
