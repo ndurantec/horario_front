@@ -4,6 +4,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function salvar () {
     const nome = document.getElementById("nome").value;
+
+
+
+
+
+
+
+
+
     const cpf = Number(document.getElementById("cpf").value);
 
             if (cpf) {
@@ -11,6 +20,7 @@ function salvar () {
                 return false;
             } else {
                 alert("CPF Inválido!");
+                document.getElementById('cpf').value = '';
                 document.getElementById('cpf').focus ();
             }
 
