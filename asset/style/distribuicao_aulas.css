@@ -1,12 +1,13 @@
 /* Estilos gerais */
 body {
     font-family: "Lexend", sans-serif;
-    background-color: #addbf0;
+    /* background-color: #addbf0; */
     color: #0e070f;
     margin: 0;
   }
 
   /* Estilos do formulário */
+<<<<<<< HEAD
 form {
 
     width: 200%;
@@ -14,6 +15,13 @@ form {
     float: right; 
     max-width: 800px;
 
+=======
+.table-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    max-width: 800px;
+>>>>>>> 690e789230925f544bac851d5ea10e42066dd83a
     align-items: center;
     max-width: 600px;
     margin: 0 auto;
@@ -21,8 +29,11 @@ form {
     border: 1px solid #3273d4;
     border-radius: 5px;
     background-color: #a3cae4;
+
+    
   }
 
+<<<<<<< HEAD
     table {
       width: 100%;
       border-collapse: collapse;
@@ -31,14 +42,42 @@ form {
       table-layout: fixed;
     }
 
+=======
+  form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    float :right;
+    max-width: 800px;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+
+  }
+
+  table {
+    width: 500%;
+    border-collapse: collapse;
+    border: 1px solid black;
+    text-align: center;
+    table-layout: fixed;
+  }
+>>>>>>> 690e789230925f544bac851d5ea10e42066dd83a
   td, th {
     border: 1px solid black;
     overflow: hidden;
     text-overflow: ellipsis;
   }
+<<<<<<< HEAD
   
+=======
+
+
+>>>>>>> 690e789230925f544bac851d5ea10e42066dd83a
   label {
-    display: block;
+    display: flex;
     margin-bottom: 10px;
     font-weight: bold;
   }
@@ -96,4 +135,17 @@ button{
   
   .button-home:hover{
     background-color: #097897;
+  }
+
+  .aula {
+    width: 100px;
+    height: 100px;
+    color: red;
+    border: solid 2px;
+  }
+
+  .terca {
+    width: 100px;
+    height: 100px;
+    color: blue;
   }
