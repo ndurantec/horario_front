@@ -5,23 +5,49 @@ document.addEventListener("DOMContentLoaded", function() {
 function salvar () {
     const nome = document.getElementById("nome").value;
 
+    if (nome.trim() === '' || nome.length < 2) {
+      alert("Nome Inválido! Deve ter pelo menos 2 caracteres e conter apenas letras.");
+      return false;
+  }
+
+  const regex = /^[A-Za-zÀ-ÿ\s]+$/;
+  if (!regex.test(nome)) {
+      alert("Nome Inválido! Deve conter apenas letras.");
+      return false;
+  }
+
+  alert("Nome Válido!");
+  return true;
+}
+
+// Função para validar o CPF
+function validarCPF(cpf) {
+  // Verifica se o CPF está preenchido e é uma string numérica
+  if (cpf.trim() === '' || isNaN(cpf) || cpf.length !== 11) {
+      alert("CPF Inválido!");
+      document.getElementById('cpf').value = '';
+      document.getElementById('cpf').focus();
+      return false;
+  }
+
+  alert("CPF Válido!");
+  return true;
+}
+
       // Verifica se o nome não está vazio e tem pelo menos 2 caracteres
-      if (nome.trim() === '' || nome.length < 2) {
+    /*  if (nome.trim() === '' || nome.length < 2) {
         return false
       }
 
       const regex = /^[A-Za-zÀ-ÿ\s]+$/;
-      return regex.test(nome); 
+      return regex.test(nome); }
     
-
-
-
-      if (nome.length) {
+      if (nome.length ===0) {
         alert("Nome Válido!");
     } else {
         alert("Nome Inválido! Deve ter pelo menos 2 caracteres e conter apenas letras.");
     }
-}
+
 
 
     const cpf = Number(document.getElementById("cpf").value);
@@ -33,8 +59,7 @@ function salvar () {
                 alert("CPF Inválido!");
                 document.getElementById('cpf').value = '';
                 document.getElementById('cpf').focus ();
-            }
-
+            }*/
 
 
     var headers = new Headers();    
@@ -85,7 +110,7 @@ function salvar () {
   })
   //Aqui será executado caso a then não seja chamado
   .catch(error => console.error('Erro!:', error));
-}
+
 
   function consultar () {
     const nome = document.getElementById('nome').value;
