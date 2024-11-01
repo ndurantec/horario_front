@@ -7,21 +7,20 @@ body {
   }
 
   /* Estilos do formulário */
-<<<<<<< HEAD
+
 form {
 
     width: 200%;
     height: 200%;
     float: right; 
     max-width: 800px;
-
-=======
+}
 .table-container {
     width: 100%;
     height: 100%;
     display: flex;
     max-width: 800px;
->>>>>>> 690e789230925f544bac851d5ea10e42066dd83a
+
     align-items: center;
     max-width: 600px;
     margin: 0 auto;
@@ -33,7 +32,7 @@ form {
     
   }
 
-<<<<<<< HEAD
+
     table {
       width: 100%;
       border-collapse: collapse;
@@ -42,7 +41,7 @@ form {
       table-layout: fixed;
     }
 
-=======
+
   form{
     width: 100%;
     height: 100%;
@@ -64,18 +63,16 @@ form {
     text-align: center;
     table-layout: fixed;
   }
->>>>>>> 690e789230925f544bac851d5ea10e42066dd83a
+
   td, th {
     border: 1px solid black;
     overflow: hidden;
     text-overflow: ellipsis;
   }
-<<<<<<< HEAD
   
-=======
 
 
->>>>>>> 690e789230925f544bac851d5ea10e42066dd83a
+
   label {
     display: flex;
     margin-bottom: 10px;
