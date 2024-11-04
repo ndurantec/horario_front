@@ -23,6 +23,8 @@ function salvar () {
 
   alert("Nome Válido!");
   return true;
+}
+
 
 // Função para validar o CPF
 function validarCPF(cpf) {
@@ -37,7 +39,7 @@ function validarCPF(cpf) {
   alert("CPF Válido!");
   return true;
 
-}}
+}
 
 
 
