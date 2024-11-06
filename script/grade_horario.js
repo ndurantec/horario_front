@@ -223,6 +223,4 @@ function carregarComboTurma() {
   })
   .catch(error => console.error('Erro ao carregar locais:', error));
    
-
 }
-
