@@ -4,6 +4,24 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function salvar () {
   const diaDaSemana = document.getElementById("diaDaSemana").value;
+
+    // Verifica se o campo está vazio
+    if (diaDaSemana === '') {
+      mensagem.textContent = 'O campo não pode ficar vazio. Por favor, digite um dia da semana.';
+      return; // Interrompe a execução se o campo estiver vazio
+  }
+
+  // Verifica se contém números
+  if (/\d/.test(diaDaSemana)) {
+      mensagem.textContent = 'O campo não pode conter números. Por favor, digite um dia da semana válido.';
+      return; // Interrompe a execução se houver números
+  }
+
+ 
+
+
+
+
   const posicaoDaAula = document.getElementById("posicao_aula").value;
   
 
