@@ -71,7 +71,6 @@ function validarCPF(cpf) {
                 document.getElementById('cpf').value = '';
                 document.getElementById('cpf').focus ();
             }*/
-}
 
 
     var headers = new Headers();    
@@ -122,6 +121,7 @@ function validarCPF(cpf) {
   })
   //Aqui será executado caso a then não seja chamado
   .catch(error => console.error('Erro!:', error));
+}
 
 
   function consultar () {
