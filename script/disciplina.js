@@ -8,6 +8,18 @@ function salvar() {
   const cargaHoraria = Number(document.getElementById("carga_horaria").value);
   const professor = Number(document.getElementById("professor").value);
 
+    if (nome.length >50){
+    alert("O nome deve ter no máximo 50 caracteres");
+    document.getElementById("nome").value;
+    return false;
+  }
+
+
+
+
+
+
+
   console.log(nome);
   console.log(cargaHoraria);
   console.log(professor);
