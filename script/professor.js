@@ -29,7 +29,6 @@ function salvar() {
     return;
   }
 
-
   alert("Nome Válido!");
   return true;
 }
@@ -50,24 +49,7 @@ function validarCPF(cpf) {
   
 
 
-
-
-      // Verifica se o nome não está vazio e tem pelo menos 2 caracteres
-    /*  if (nome.trim() === '' || nome.length < 2) {
-        return false
-      }
-
-      const regex = /^[A-Za-zÀ-ÿ\s]+$/;
-      return regex.test(nome); }
-    
-      if (nome.length ===0) {
-        alert("Nome Válido!");
-    } else {
-        alert("Nome Inválido! Deve ter pelo menos 2 caracteres e conter apenas letras.");
-    }
-
-
-
+/*
     const cpf = Number(document.getElementById("cpf").value);
 
             if (cpf) {
