@@ -1,7 +1,7 @@
 /* Estilos gerais */
 body {
     font-family: "Lexend", sans-serif;
-    /* background-color: #addbf0; */
+    background-color: #addbf0; 
     color: #0e070f;
     margin: 0;
   }
@@ -134,7 +134,7 @@ button{
   .aula{
     width: 70%;
     height: 100px;
-    color: red;
+    color: rgb(0, 110, 255);
     border: solid 2px;
     justify-content: center;
     display: flex;
