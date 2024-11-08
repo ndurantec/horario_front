@@ -8,15 +8,23 @@ function salvar() {
   const cargaHoraria = Number(document.getElementById("carga_horaria").value);
   const professor = Number(document.getElementById("professor").value);
 
+  if (nomeDisciplina === "") {
+    alert("O nome da disciplina não pode estar vazio.");
+    document.getElementById("nome").value;
+    return; // Interrompe o envio do formulário
+}
+
+  if (nome.length < 3) {
+    alert("O nome da disciplina deve ter pelo menos 3 caracteres.");
+    document.getElementById("nome").value; 
+    return;
+}
+
     if (nome.length >50){
     alert("O nome deve ter no máximo 50 caracteres");
     document.getElementById("nome").value;
     return false;
-  }
-
-
-
-
+}
 
 
 
