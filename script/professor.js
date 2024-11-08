@@ -2,11 +2,11 @@ document.addEventListener("DOMContentLoaded", function() {
   localStorage.setItem('id_professor', '');
 });
 
-function salvar () {
+function salvar() {
     const nome = document.getElementById("nome").value;
     const cpf = document.getElementById("cpf").value;
 
-    /*
+    
     if (nome.trim() === '' || nome.length < 2) {
       alert("Nome Inválido! Deve ter pelo menos 2 caracteres e conter apenas letras.");
       document.getElementById('nome').value = '';
@@ -21,7 +21,14 @@ function salvar () {
       document.getElementById('nome').focus();
       return false;
   }
-  
+
+  if (nome.length > 50){
+    alert('O nome deve ter no máximo 50 caracteres');
+    document.getElementById('nome').value = '';
+    document.getElementById('nome').focus();
+    return;
+  }
+
 
   alert("Nome Válido!");
   return true;
