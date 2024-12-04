@@ -7,7 +7,7 @@ function salvar() {
     const cpf = document.getElementById("cpf").value;
 
     
-    if (nome.trim() === '' || nome.length < 2) {
+    /*if (nome.trim() === '' || nome.length < 2) {
       alert("Nome Inválido! Deve ter pelo menos 2 caracteres e conter apenas letras.");
       document.getElementById('nome').value = '';
       document.getElementById('nome').focus();
@@ -53,7 +53,7 @@ function validarCPF(cpf) {
 
 
       // Verifica se o nome não está vazio e tem pelo menos 2 caracteres
-    /*  if (nome.trim() === '' || nome.length < 2) {
+      if (nome.trim() === '' || nome.length < 2) {
         return false
       }
 
