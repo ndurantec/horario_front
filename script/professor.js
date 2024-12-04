@@ -6,12 +6,25 @@ function salvar() {
     const nome = document.getElementById("nome").value;
     const cpf = document.getElementById("cpf").value;
 
+    console.log(cpf);
+
+    let cpfVadido = validarCPF(cpf);
+
+    if (cpfVadido) {      
+       alert("CPF Válido");      
+    } else {      
+      alert("CPF Inválido!");
+      document.getElementById('cpf').value = '';
+      document.getElementById('cpf').focus ();
+    }
+
     
     /*if (nome.trim() === '' || nome.length < 2) {
       alert("Nome Inválido! Deve ter pelo menos 2 caracteres e conter apenas letras.");
       document.getElementById('nome').value = '';
       document.getElementById('nome').focus();
       return false;
+<<<<<<< HEAD
   }
 
   const regex = /^[A-Za-zÀ-ÿ\s]+$/;
@@ -64,10 +77,31 @@ function validarCPF(cpf) {
         alert("Nome Válido!");
     } else {
         alert("Nome Inválido! Deve ter pelo menos 2 caracteres e conter apenas letras.");
+=======
+>>>>>>> e8fc14037ce10b47a91b17700f33269eab44496c
     }
 
+    const regex = /^[A-Za-zÀ-ÿ\s]+$/;
+    if (!regex.test(nome)) {
+        alert("Nome Inválido! Deve conter apenas letras.");
+        document.getElementById('nome').value = '';
+        document.getElementById('nome').focus();
+        return false;
+    }
+
+    if (nome.length > 50){
+      alert('O nome deve ter no máximo 50 caracteres');
+      document.getElementById('nome').value = '';
+      document.getElementById('nome').focus();
+      return;
+    }
+
+ 
 
 
+    
+
+/*
     const cpf = Number(document.getElementById("cpf").value);
 
             if (cpf) {
@@ -129,6 +163,35 @@ function validarCPF(cpf) {
   //Aqui será executado caso a then não seja chamado
   .catch(error => console.error('Erro!:', error));
 }
+
+
+// Função para validar o CPF
+function validarCPF(strCPF) {
+  // Verifica se o CPF está preenchido e é uma string numérica
+  
+  var Soma;
+  var Resto;
+  Soma = 0;
+ 
+  if (strCPF == "00000000000") return false;
+
+  for (i=1; i<=9; i++) Soma = Soma + parseInt(strCPF.substring(i-1, i)) * (11 - i);
+    
+  Resto = (Soma * 10) % 11;
+
+  if ((Resto == 10) || (Resto == 11))  Resto = 0;
+  if (Resto != parseInt(strCPF.substring(9, 10)) ) return false;
+
+  Soma = 0;
+  for (i = 1; i <= 10; i++) Soma = Soma + parseInt(strCPF.substring(i-1, i)) * (12 - i);
+  Resto = (Soma * 10) % 11;
+
+  if ((Resto == 10) || (Resto == 11))  Resto = 0;
+  if (Resto != parseInt(strCPF.substring(10, 11) ) ) return false;
+  return true;
+}
+
+
 
 
   function consultar () {
