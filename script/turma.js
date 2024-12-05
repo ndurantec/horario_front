@@ -52,7 +52,7 @@ function salvar () {
       console.log('Foi no servidor e voltou');
 
       //Esta linha carrega a página sucesso
-      //window.location.href = 'sucesso.html'    
+      window.location.href = 'sucesso.html'    
 
   })
   //Aqui será executado caso a then não seja chamado

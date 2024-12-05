@@ -8,15 +8,13 @@ function salvar() {
 
     console.log(cpf);
 
-    let cpfVadido = validarCPF(cpf);
+    // let cpfVadido = validarCPF(cpf);
 
-    if (cpfVadido) {      
-       alert("CPF Válido");      
-    } else {      
-      alert("CPF Inválido!");
-      document.getElementById('cpf').value = '';
-      document.getElementById('cpf').focus ();
-    }
+    // if (!cpfVadido) {     
+    //   alert("CPF Inválido!");
+    //   document.getElementById('cpf').value = '';
+    //   document.getElementById('cpf').focus ();
+    // }
 
     
     if (nome.trim() === '' || nome.length < 2) {
