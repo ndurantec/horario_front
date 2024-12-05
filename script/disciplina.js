@@ -55,14 +55,16 @@ function salvar() {
 
     //Aqui inicia função then
   }).then(response => {
-
+    
     if(response.ok) {
 
       return response.json(); //transforma a resposta em JSON
       //console.log("Foi no servidor e voltou");
 
+
+
       //Esta linha carrega a página sucesso
-      //window.location.href = "sucesso.html"    
+      window.location.href = "sucesso.html"    
     } else {
      //Esta linha imprime a mensagem no console
       console.log('Aconteceu algo que não foi possivel salvar');
@@ -81,12 +83,18 @@ function salvar() {
 
       console.log('Foi no servidor e voltou');
 
+      console.log("A mensagem " + data);
+
       //Esta linha carrega a página sucesso
       //window.location.href = 'sucesso.html'    
+      
+    })
+    //Aqui será executado caso a then não seja chamado
+    .catch(error => console.error("Erro!:", error)
+    //.catch(error => alert("Erro!:" + error.message)
+    
 
-  })
-  //Aqui será executado caso a then não seja chamado
-  .catch(error => console.error("Erro!:", error));
+  );
 }
 
 
