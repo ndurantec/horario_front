@@ -8,7 +8,7 @@ function salvar() {
   const cargaHoraria = Number(document.getElementById("carga_horaria").value);
   const professor = Number(document.getElementById("professor").value);
 
-  if (nomeDisciplina === "") {
+  if (nome === "") {
     alert("O nome da disciplina não pode estar vazio.");
     document.getElementById("nome").value;
     return; // Interrompe o envio do formulário
