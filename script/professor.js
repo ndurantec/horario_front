@@ -94,10 +94,6 @@ function validarCPF(cpf) {
       return;
     }
 
- 
-
-
-    
 
 /*
     const cpf = Number(document.getElementById("cpf").value);
